@@ -1,0 +1,22 @@
+# Secret files & API keys
+.env
+*.env
+.env.*
+!.env.example
+
+# Python / Virtual Environment
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Node / Frontend
+node_modules/
+dist/
+.cache/
+
+# OS / IDE files
+.DS_Store
+.vscode/
+.idea/

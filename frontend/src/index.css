@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #FBF9F5;
+    color: #000000;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  }
+
+  ::selection {
+    background-color: #DDD6FE;
+    color: #000000;
+  }
+}
+
+@layer utilities {
+  /* Neubrutalist Core Components */
+  
+  .neo-card {
+    @apply border-4 border-black bg-white rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200;
+  }
+  
+  .neo-card-interactive {
+    @apply border-4 border-black bg-white rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all duration-200 hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+  }
+
+  .neo-btn {
+    @apply border-4 border-black rounded-xl font-extrabold px-6 py-3 transition-all duration-100 flex items-center justify-center gap-2 select-none shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-[6px_6px_0px_0px_rgba(0,0,0,1)] active:translate-x-0.5 active:translate-y-0.5 active:shadow-none;
+  }
+
+  .neo-btn-flat {
+    @apply border-4 border-black rounded-xl font-bold px-4 py-2 bg-white transition-all select-none;
+  }
+
+  .neo-input {
+    @apply border-4 border-black rounded-xl px-4 py-3 bg-white font-medium shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] focus:outline-none focus:shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] focus:-translate-x-0.5 focus:-translate-y-0.5 transition-all;
+  }
+
+  .neo-badge {
+    @apply border-2 border-black rounded-full px-3 py-1 text-xs font-black uppercase tracking-wider;
+  }
+
+  /* Blocky Progress Bar */
+  .progress-container {
+    @apply border-4 border-black bg-white rounded-xl p-1 flex gap-1 h-8 overflow-hidden shadow-[4px_4px_0px_0px_rgba(0,0,0,1)];
+  }
+
+  .progress-block {
+    @apply h-full w-full rounded-md border-r-2 border-black last:border-r-0 transition-all duration-300;
+  }
+
+  /* Speech Bubble Accent */
+  .neo-speech-bubble {
+    @apply relative border-4 border-black bg-white p-5 rounded-2xl shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] text-lg font-black;
+  }
+
+  .neo-speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -16px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #000000;
+  }
+
+  .neo-speech-bubble-inner::after {
+    content: '';
+    position: absolute;
+    bottom: -11px;
+    left: 42px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #FFFFFF;
+    z-index: 10;
+  }
+}
